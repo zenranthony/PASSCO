@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(paco2.png);
+    background-size: cover;
+    height: auto;
+}
+
+.slip-generator-container {
+margin-left: 150px;
+margin-bottom: 25px;
+ width: 80%;
+ padding: 40px;
+ height: 20%;
+ border: 2px inset rgb(255, 255, 255);
+ border-width: 4px;
+ border-radius: 30px;
+ background: rgba(0, 0, 0, 0.445);
+ backdrop-filter: blur(10px); 
+-webkit-backdrop-filter: blur(10px);
+margin-top: 25px;
+
+
+}
+
+h1 {
+  font-size: 2em;
+  color:#fff;
+  text-align: center;
+
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+                              
+.form-section label {
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 5px;
+    font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.form-section input[type="text"],
+.form-section input[type="number"],
+.form-section select,
+.form-section textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't add to total width */
+}
+
+.form-section textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 80px;
+}
+
+.form-section button {
+    background-color: #1a237e; /* PASCCO blue */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+    background-color: #0d47a1; /* Darker blue on hover */
+}
+
+/* --- Slip Template Styling (Hidden by default, used for PDF) --- */
+#slipContent {
+    display: none; /* Hide the template by default */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    width: 80mm; /* Standard slip width for printing */
+    margin: 0 auto; /* Center for preview if visible */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 10pt;
+    color: #333;
+    text-align: left;
+}
+
+.slip-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 15px;
+}
+
+.slip-logo {
+    height: 60px; /* Adjust logo size as needed */
+    width: auto;
+    margin-right: 15px;
+}
+
+.bank-info h2 {
+    color: #1a237e;
+    font-size: 12pt;
+    margin: 0;
+}
+
+.bank-info p {
+    font-size: 8pt;
+    margin: 2px 0 0;
+    color: #555;
+}
+
+.slip-title {
+    color: #1a237e;
+    font-size: 16pt;
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #1a237e;
+    padding-bottom: 5px;
+}
+
+.slip-details .detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.slip-details .label {
+    font-weight: bold;
+    color: #555;
+    flex-basis: 40%; /* Adjust label width */
+}
+
+.slip-details .value {
+    flex-basis: 60%; /* Adjust value width */
+    text-align: right;
+    color: #333;
+}
+
+.slip-details .amount-row .value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+}
+
+.specific-details {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+.signature-line {
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    text-align: left !important;
+    text-transform: uppercase;
+}
+
+.slip-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed #ccc;
+    font-size: 8pt;
+    color: #666;
+}
+
+.slip-footer .disclaimer {
+    margin-top: 10px;
+    font-style: italic;
+    color: #888;
+}
+
+/* Print Specific Styles - Hide form when printing */
+@media print {
+    .slip-generator-container {
+        display: none;
+    }
+    #slipContent {
+        display: block; /* Only show the slip template when printing */
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        font-size: 10pt;
+    }
+    body {
+        background-color: #fff;
+    }
+}
+/* Other CSS rules... */
+
+.bank-info h2 {
+    color: #1a237e; /* PASCCO blue */
+    font-size: 1.5em; /* Adjust as needed */
+    margin: 0;
+}
+
+.bank-info p {
+    font-size: 0.8em; /* Adjust as needed */
+    margin: 2px 0 0;
+    color: #555;
+}
