@@ -15,5 +15,5 @@ document.getElementById('REGISTER').onclick = function(event) {
     
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
-    window.location.href = "/LOGIN/1LOGIN.html"; 
+    window.location.href = "1LOGIN.html"; 
 };
