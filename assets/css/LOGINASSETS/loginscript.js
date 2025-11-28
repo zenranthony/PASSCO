@@ -1,7 +1,7 @@
 // --- Configuration ---
 /*const VALID_USERNAME = "ejay";
 const VALID_PASSWORD = "123"; */
-const DASHBOARD_URL = "/ANNOUNCEMENT/2ANNOUNCEMENT_PAGE.html"; 
+const DASHBOARD_URL = "2ANNOUNCEMENT_PAGE.html"; 
 
 function loginUser() {
     const usernameInput = document.getElementById('username-input').value.trim();
@@ -22,7 +22,7 @@ function loginUser() {
         messageElement.style.color = "#4CAF50";
 
         setTimeout(() => {
-            window.location.href = "/ANNOUNCEMENT/2ANNOUNCEMENT_PAGE.html";
+            window.location.href = "2ANNOUNCEMENT_PAGE.html";
         }, 500);
 
     } else {
@@ -45,3 +45,4 @@ function logoutUser() {
     // 2. Redirect back to the login page (index.html)
     window.location.href = 'index.html'; 
 }
+
