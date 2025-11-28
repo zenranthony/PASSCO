@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; 
+}
+
+body {
+  background-image: url('/assets/paco2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+   /* MAIN CONTAINER */
+    .management {
+        background: linear-gradient(to right, #0e0e56, #2d2dd8);
+        margin: 20px auto;
+        width: 60%;
+        height: 76%;
+        padding: 40px 0;
+        border-radius: 40px;
+        border: inset 3px #ffffffb2;
+    }
+
+    /* IMAGE GRID */
+
+
+	.chart img {
+		width: 90%;
+		height: 60%;
+        margin-left: 57px;
+        margin-bottom: 10px;
+        border-radius: 30px;
+
+	}
