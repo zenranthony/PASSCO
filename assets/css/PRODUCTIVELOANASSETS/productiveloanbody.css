@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('../../assets/images/paco2.png');
+    background-image: url('../images/paco2.png');
     height: auto;
     background-size: cover;
 }
